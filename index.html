@@ -3,7 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pixabay Gallery</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-0fc460d7.js">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-4b066c51.css">
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Pixabay Image Search</h1>
+      <form id="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Enter search term..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main>
+      <div class="gallery" id="gallery"></div>
+      <div id="loading-indicator" class="hidden">
+        <img src="/assets/loading.gif" alt="Loading..." />
+      </div>
+    </main>
+
+    
+  </body>
 </html>
