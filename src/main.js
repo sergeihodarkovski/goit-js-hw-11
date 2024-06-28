@@ -8,7 +8,7 @@ import { renderGallery, clearGallery } from './js/render-functions.js';
 const form = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const gallery = document.getElementById('gallery');
-const loadingIndicator = document.getElementById('loading-indicator');
+const loadingIndicator = document.querySelector('.loader');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
