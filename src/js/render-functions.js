@@ -13,7 +13,7 @@ export function createImageCard(image) {
 }
 
 export function renderGallery(images) {
-  const gallery = document.querySelector('.gallery[data-gallery]');
+  const gallery = document.getElementById('gallery');
   gallery.innerHTML = images.map(createImageCard).join('');
 }
 

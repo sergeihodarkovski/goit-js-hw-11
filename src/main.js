@@ -17,7 +17,7 @@ form.addEventListener('submit', event => {
 
   if (searchTerm === '') {
     iziToast.error({
-      message: 'Пожалуйста, введите ключевое слово для поиска.',
+      message: 'Please enter a search keyword.',
     });
     return;
   }
@@ -30,18 +30,18 @@ form.addEventListener('submit', event => {
       if (images.length === 0) {
         iziToast.info({
           message:
-            'Sorry, there are no images matching your search query. Please try again!',
+            'Sorry, no images matching your search query were found. Please try again!',
         });
       } else {
-        renderGallery(gallery, images);
+        renderGallery(images);
         initializeLightbox();
+        searchInput.value = '';
       }
     })
     .catch(error => {
-      console.error('Ошибка при загрузке изображений:', error);
+      console.error('Error loading images:', error);
       iziToast.error({
-        message:
-          'Не удалось загрузить изображения. Пожалуйста, попробуйте позже.',
+        message: 'Failed to load images. Please try again later.',
       });
     })
     .finally(() => {
